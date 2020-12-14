@@ -1,0 +1,19 @@
+{
+    "manifest_version": 2,
+    "name": "ChromeCuts",
+    "version": "0.01",
+    "content_scripts": [
+	{
+	    "matches": [
+	    	"https://nyaa.si/*"
+	    ],
+	    "js": ["jquery.js", "content.js"]
+	}
+    ],
+    "background": {
+	"scripts": ["background.js"]
+    },
+    "permissions": [
+	"tabs"
+    ]
+}
