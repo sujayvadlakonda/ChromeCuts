@@ -1,5 +1,8 @@
 // Main Method
 chrome.tabs.onUpdated.addListener(function (tabId, changeInfo, tab) {
-    console.log("Detected a match!");
-    chrome.tabs.sendMessage(tabId, {"message": "nyaa.si"});
+    if(tab.url.includes('nyaa.si')) {
+        chrome.tabs.sendMessage(tabId, {"message": "nyaa.si"});
+    } else {
+        chrome.tabs.sendMessage(tabId, {"message": "Microsoft Stream"});
+    }
 });

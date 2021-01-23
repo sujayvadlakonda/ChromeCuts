@@ -3,6 +3,8 @@ chrome.runtime.onMessage.addListener(
     function(request, sender, sendResponse) {
         if(request.message === "nyaa.si") {
             nyaaDotSi();
+        } else if(request.message === "Microsoft Stream") {
+            microsoftStream();
         }
     }
 );
@@ -24,4 +26,8 @@ function nyaaDotSi() {
         // Click on the search bar
         $("input.form-control.search-bar").focus();
     }
+}
+
+function microsoftStream() {
+    console.log("Microsoft Stream Detected");
 }
