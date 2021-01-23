@@ -30,4 +30,12 @@ function nyaaDotSi() {
 
 function microsoftStream() {
     console.log("Microsoft Stream Detected");
+    if(!window.location.href.includes("view=videos")) {
+        if(window.location.href.includes("?")) {
+            window.location.replace(window.location.href + "view=videos");
+        }
+        else {
+            window.location.replace(window.location.href + "?view=videos");
+        }
+    }
 }
