@@ -3,17 +3,18 @@
     "name": "ChromeCuts",
     "version": "0.01",
     "content_scripts": [
-	{
-	    "matches": [
-	    	"https://nyaa.si/*"
-	    ],
-	    "js": ["jquery.js", "content.js"]
-	}
+        {
+            "matches": [
+                "https://nyaa.si/*",
+                "https://web.microsoftstream.com/group/*"
+            ],
+            "js": ["jquery.js", "content.js"]
+        }
     ],
     "background": {
-	"scripts": ["background.js"]
+        "scripts": ["background.js"]
     },
     "permissions": [
-	"tabs"
+        "tabs"
     ]
 }
